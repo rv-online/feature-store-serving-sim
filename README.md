@@ -1,10 +1,30 @@
-
 # Feature Store Serving Sim
 
-Python simulation of online feature retrieval with freshness checks and point-in-time safe reads. This one signals ML platform and data infrastructure instincts.
+TypeScript simulation of online feature serving, latency-aware lookups, and fallback behavior.
 
-## Run
+## Why This Exists
+
+Framed like a serving-layer prototype for ML platform teams that care about low-latency retrieval and operational fallbacks.
+
+## What This Demonstrates
+
+- online-serving style request handling
+- fallback and latency-aware decision logic
+- compact codebase with real platform flavor
+
+## Architecture
+
+1. entity requests are mapped to feature retrieval plans
+1. serving logic resolves primary and fallback sources
+1. results summarize feature freshness and serving posture
+
+## Run It
 
 ```bash
-python -m src.cli
+npm test
+npm run build
 ```
+
+## Verification
+
+Run `npm test` and `npm run build` to validate serving behavior.
